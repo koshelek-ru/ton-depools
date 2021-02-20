@@ -1,0 +1,15 @@
+$grid-breakpoints: (
+  'xs': 0,
+  'sm': 420px,
+  'md': 1350px,
+  'lg': 1500px,
+  'xl': 1650px, 
+);
+
+@function map($map, $key) {
+  @if map-has-key($map, $key) {
+    @return map-get($map, $key);
+  } @else {
+    @error "ERROR: Specified index does not exist in the mapping";
+  }   
+}
